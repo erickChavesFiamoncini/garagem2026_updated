@@ -7,6 +7,6 @@ class Modelo(models.Model):
     categoria = models.CharField(max_length=80, null=True, blank=True)
 
     def __str__(self):
-        marca = self.marca.upper() if self.marca else ""
-        nome = self.nome.upper() if self.nome else ""
+        marca = self.marca.upper() if self.marca else ''
+        nome = self.nome.upper() if self.nome else ''
         return f'({self.id}) {marca} {nome}'
