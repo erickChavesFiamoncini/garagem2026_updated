@@ -9,4 +9,4 @@ class Modelo(models.Model):
     def __str__(self):
         marca = self.marca.upper() if self.marca else ''
         nome = self.nome.upper() if self.nome else ''
-        return f'({self.id}) {marca} {nome}'
+        return f'({self.id}) {marca}  {nome}'

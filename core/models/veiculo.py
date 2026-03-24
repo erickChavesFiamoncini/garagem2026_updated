@@ -13,4 +13,6 @@ class Veiculo(models.Model):
     acessorios = models.ManyToManyField(Acessorio, related_name='veiculos')
 
     def __str__(self):
-        return f'({self.id}) - {self.modelo} - {self.cor} - {self.ano}'
+        modelo = self.modelo.nome.upper() if self.modelo and self.modelo.nome else ''
+        cor = self.cor.nome.upper() if self.cor and self.cor.nome else ''
+        return f'({self.id}) {modelo} - {cor} - {self.ano}'
